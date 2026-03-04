@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sürpriz Hediye!</title>
+    <style>
+        body { text-align: center; padding-top: 100px; font-family: sans-serif; background: #f0f0f0; }
+        button { padding: 20px 40px; font-size: 24px; cursor: pointer; background: red; color: white; border: none; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Tebrikler! Büyük Ödülü Kazandınız!</h1>
+    <p>Ödülünüzü almak için aşağıdaki butona tıklayın.</p>
+    <button onclick="baslat()">HEDİYEMİ VER!</button>
+
+    <script>
+        function baslat() {
+            // İlk pencereyi aç ve döngüyü başlat
+            for(let i=0; i<5; i++) {
+                pencereAc();
+            }
+        }
+
+        function pencereAc() {
+            let x = Math.random() * window.screen.availWidth;
+            let y = Math.random() * window.screen.availHeight;
+            // "idiot.html" adında bir dosyanın aynı klasörde olması lazım
+            window.open("idiot.html", "", "width=300,height=300,left=" + x + ",top=" + y);
+        }
+    </script>
+</body>
+</html>
